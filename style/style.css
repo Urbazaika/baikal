@@ -10,7 +10,7 @@
 	width: 0;
 	height: 100vh;
 	width: 100%;
-	background-image: url("/img/IMG_7700\ \(1\).PNG");
+	background-image: url("/img/IMG_7700.PNG");
 	background-repeat: no-repeat;
 	background-size: cover;
 	z-index: -1;
@@ -62,20 +62,29 @@ h1 {
 main {
 	min-height: 200vh;
 }
-
+.wrapper {
+	height: 200vh;
+}
 .carousel {
 	width: 100%;
 	height: 100vh;
+	position: sticky;
+	top: 0;
+	left: 0;
 }
 
-.carousel-item-1 {
+.carousel-item {
 	width: 100%;
 	height: 100vh;
 	position: absolute;
-	top: 100vh;
-	background-image: url("/img/IMG_7702.JPG");
+	top: 0;
+	left: 0;
 	background-repeat: no-repeat;
 	background-size: cover;
+	transition: opacity 0.5s;
+}
+.carousel-item.hide {
+	opacity: 0;
 }
 /* animation */
 
