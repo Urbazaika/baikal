@@ -59,9 +59,6 @@ h1 {
 	color: white;
 	text-decoration: none;
 }
-main {
-	min-height: 200vh;
-}
 .wrapper {
 	height: 200vh;
 }
@@ -81,10 +78,37 @@ main {
 	left: 0;
 	background-repeat: no-repeat;
 	background-size: cover;
-	transition: opacity 0.5s;
+	transition: opacity 1s ease;
 }
 .carousel-item.hide {
 	opacity: 0;
+}
+
+.indicators {
+	position: absolute;
+	z-index: 1000;
+	bottom: 20px;
+	left: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 20px;
+}
+
+.indicators.hide {
+	opacity: 0;
+}
+
+.indicator {
+	width: 20px;
+	height: 20px;
+	border: 2px solid #fff;
+	border-radius: 50%;
+	background-color: transparent;
+}
+
+.indicator.full {
+	background-color: #fff;
 }
 /* animation */
 
