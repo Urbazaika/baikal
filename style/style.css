@@ -3,7 +3,6 @@
 	padding: 0;
 	box-sizing: border-box;
 }
-
 .photo {
 	position: absolute;
 	top: 0;
@@ -97,6 +96,11 @@ h1 {
 
 .indicators.hide {
 	opacity: 0;
+	transform: translateY(50px);
+}
+
+.indicators.show {
+	transition: transform 1s ease;
 }
 
 .indicator {
@@ -107,11 +111,69 @@ h1 {
 	background-color: transparent;
 }
 
-.indicator.full {
+.indicator-full {
+	position: absolute;
 	background-color: #fff;
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	transition: transform 0.5s ease;
+}
+
+.carousel-item-1 {
+	animation: blurup 2s 1;
+}
+
+.carousel-item-2 {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-weight: 400;
+	/* filter: blur(15px); */
+}
+
+.wrapper-osnovnoi {
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 60px;
+	backdrop-filter: blur(10px);
+}
+
+.photOsnova {
+	width: 800px;
+	height: 450px;
+}
+.osnova {
+	color: #fff;
+	text-align: center;
+	font-size: 120px;
+	/* writing-mode: vertical-rl; */
+}
+
+.vozduhText {
+	padding-top: 20px;
+	letter-spacing: 2.5px;
+	color: white;
+	width: 750px;
+	margin-left: 10px;
+}
+
+.vozduhText span {
+	animation: letter-glow 0.7s 0s ease both;
+}
+
+.vozduhText2 {
+	padding-bottom: 25px;
+	letter-spacing: 2.5px;
+	color: white;
+	width: 750px;
+	margin-left: 10px;
 }
 /* animation */
-
 @keyframes showup {
 	0% {
 		opacity: 0;
