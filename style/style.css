@@ -3,6 +3,7 @@
 	padding: 0;
 	box-sizing: border-box;
 }
+
 .photo {
 	position: absolute;
 	top: 0;
@@ -16,17 +17,16 @@
 	animation: blurup 2s 1;
 	background-attachment: fixed;
 }
-h1 {
+.my {
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	text-align: center;
 	font-size: 200px;
-	color: white;
-	letter-spacing: 50px;
+	color: aliceblue;
 	position: absolute;
 	top: 35vh;
-	left: 25%;
+	left: 20%;
 	animation: showup 3s 1;
 }
 
@@ -37,10 +37,11 @@ h1 {
 }
 
 .header {
-	position: fixed;
-	z-index: 100;
+	position: absolute;
+	z-index: 1000;
 	width: 100%;
 	top: 0;
+
 }
 
 .nav_list {
@@ -82,6 +83,9 @@ h1 {
 .carousel-item.hide {
 	opacity: 0;
 }
+.carousel-item-2{
+	filter: blur(2px);
+}
 
 .indicators {
 	position: absolute;
@@ -96,11 +100,6 @@ h1 {
 
 .indicators.hide {
 	opacity: 0;
-	transform: translateY(50px);
-}
-
-.indicators.show {
-	transition: transform 1s ease;
 }
 
 .indicator {
@@ -111,69 +110,61 @@ h1 {
 	background-color: transparent;
 }
 
-.indicator-full {
-	position: absolute;
+.indicator.full {
 	background-color: #fff;
-	width: 20px;
-	height: 20px;
-	border-radius: 50%;
-	transition: transform 0.5s ease;
-}
-
-.carousel-item-1 {
-	animation: blurup 2s 1;
-}
-
-.carousel-item-2 {
-	position: relative;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	font-weight: 400;
-	/* filter: blur(15px); */
-}
-
-.wrapper-osnovnoi {
-	width: 100%;
-	height: 100vh;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	gap: 60px;
-	backdrop-filter: blur(10px);
-}
-
-.photOsnova {
-	width: 800px;
-	height: 450px;
-}
-.osnova {
-	color: #fff;
-	text-align: center;
-	font-size: 120px;
-	/* writing-mode: vertical-rl; */
-}
-
-.vozduhText {
-	padding-top: 20px;
-	letter-spacing: 2.5px;
-	color: white;
-	width: 750px;
-	margin-left: 10px;
-}
-
-.vozduhText span {
-	animation: letter-glow 0.7s 0s ease both;
-}
-
-.vozduhText2 {
-	padding-bottom: 25px;
-	letter-spacing: 2.5px;
-	color: white;
-	width: 750px;
-	margin-left: 10px;
 }
 /* animation */
+
+.wrapper.Osnovnoy{
+	width: 100%;
+	height: 100vh;
+}
+
+.container {
+	display: flex;
+    overflow: hidden;
+	height: 100vh;
+}
+
+.left-panel, .right-panel {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.5s ease-in-out;
+}
+
+.left-panel {
+    background-color: #d8cbb8
+}
+
+.right-panel {
+    background-color: #ffffff; 
+}
+
+.slide-up {
+    transform: translateY(-100%);
+}
+
+.slide-down {
+    transform: translateY(100%);
+}
+.button {
+	height:50px;
+	width:100px;
+	border-radius: 25px 25px;
+	margin: -20px -50px;
+	top:50%;
+	left:50%;
+	color: #000;
+	display: grid;
+	justify-content: center;
+	align-content: space-between; 
+	position: absolute;
+	background-color: aquamarine;
+
+}
+
 @keyframes showup {
 	0% {
 		opacity: 0;
