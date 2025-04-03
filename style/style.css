@@ -26,7 +26,7 @@
 	color: aliceblue;
 	position: absolute;
 	top: 35vh;
-	left: 20%;
+	left: 35%;
 	animation: showup 3s 1;
 }
 
@@ -41,7 +41,6 @@
 	z-index: 1000;
 	width: 100%;
 	top: 0;
-
 }
 
 .nav_list {
@@ -83,7 +82,7 @@
 .carousel-item.hide {
 	opacity: 0;
 }
-.carousel-item-2{
+.carousel-item-2 {
 	filter: blur(2px);
 }
 
@@ -115,54 +114,82 @@
 }
 /* animation */
 
-.wrapper.Osnovnoy{
+.wrapperOsnovnoy {
+	position: relative;
 	width: 100%;
 	height: 100vh;
 }
 
-.container {
+/* .container {
 	display: flex;
-    overflow: hidden;
+	overflow: hidden;
 	height: 100vh;
+} */
+.parallelSlider {
+	position: relative;
+}
+.sliderBody {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	height: 600px;
+}
+.left-panel,
+.right-panel {
+	width: 100%;
+	height: 600px;
+	display: grid;
+	grid-template-columns: 1fr;
+	overflow: hidden;
+	align-items: center;
+	transition: transform 3s ease-in-out;
+	position: relative;
+}
+.right-panel {
+	grid-auto-flow: dense;
 }
 
-.left-panel, .right-panel {
-    width: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: transform 0.5s ease-in-out;
+.panel-content {
+	height: 600px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	transition: all 0.5s;
+	/* position: absolute; */
+	/* transform: translateY(-100px); */
+	order: var(--i);
 }
-
 .left-panel {
-    background-color: #d8cbb8
+	background-color: #d8cbb8;
 }
 
 .right-panel {
-    background-color: #ffffff; 
+	background-color: #ffffff;
+}
+.right-panel .panel-content {
+	transform: translateY(-600px);
 }
 
 .slide-up {
-    transform: translateY(-100%);
+	transform: translateY(-100%);
 }
 
 .slide-down {
-    transform: translateY(100%);
+	transform: translateY(100%);
 }
 .button {
-	height:50px;
-	width:100px;
+	height: 50px;
+	width: 100px;
 	border-radius: 25px 25px;
 	margin: -20px -50px;
-	top:50%;
-	left:50%;
+	top: 50%;
+	left: 50%;
 	color: #000;
 	display: grid;
 	justify-content: center;
-	align-content: space-between; 
+	align-content: space-between;
 	position: absolute;
 	background-color: aquamarine;
-
 }
 
 @keyframes showup {
