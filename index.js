@@ -114,3 +114,24 @@ function switchSlides() {
 // 		switchSlides("down"); // Прокрутка вниз
 // 	}
 // });
+
+const leftPanel = document.querySelector(".left-panel");
+const rightPanel = document.querySelector(".right-panel");
+const leftPanelContent = leftPanel.querySelectorAll(".panel-content");
+const rightPanelContent = rightPanel.querySelectorAll(".panel-content");
+
+const sliderBtn = document.querySelector(".sliderNav .button");
+let currentIndex = 0;
+sliderBtn.addEventListener("click", () => {
+	
+	//leftPanel.style.backgroundColor = colorsLeft[colorIndex];
+	// rightPanel.style.backgroundColor = colorsRight[colorIndex];
+	// colorIndex = (colorIndex + 1) % colorsLeft.length;
+	currentIndex = (currentIndex + 1) % rightPanelContent.length;
+
+	leftPanelContent.forEach((item) => item.classList.add("hidden"));
+	rightPanelContent.forEach((item) => item.classList.add("hidden"));
+
+	leftPanelContent[currentIndex].classList.remove("hidden");
+	rightPanelContent[currentIndex].classList.remove("hidden");
+});
