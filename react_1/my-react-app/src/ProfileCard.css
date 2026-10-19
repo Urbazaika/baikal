@@ -1,0 +1,36 @@
+.profile-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  max-width: 350px;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.profile-card h2 {
+  margin-top: 0;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.profile-card h3 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  color: #666;
+  font-weight: normal;
+}
+
+.profile-card p {
+  margin-bottom: 15px;
+  color: #555;
+}
+
+.profile-card ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.profile-card li {
+  margin-bottom: 5px;
+  color: #444;
+}
